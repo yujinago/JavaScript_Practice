@@ -8,8 +8,8 @@
     <button type="button" class="add-memo">メモ追加</button>
     <ul class="memo-list"></ul>
     <script>
-      const addMemoInput = document.querySelector('.add-memo');
-      addMemoInput.addEventListener('click', function() {
+      const addMemoButton = document.querySelector('.add-memo');
+      addMemoButton.addEventListener('click', function() {
         const newMemoInput = document.querySelector('.new-memo');
 
         const newMemo = document.createElement('li');
@@ -17,6 +17,8 @@
 
         const memoList = document.querySelector('.memo-list');
         memoList.append(newMemo);
+
+        newMemoInput.value = '';
       });
     </script>
   </body>
